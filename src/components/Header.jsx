@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Temporarily commented out - package needs to be installed
+// import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"; // Temporarily commented out - package needs to be installed
 import "./Header.css";
-import logo from "../img/seljak.png"; 
+// import logo from "../img/seljak.png"; // Replaced with text logo 
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,11 +11,18 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
-        <Link to="/">
-          <img src={logo} alt="Seljak Gaming" className="header-logo" />
+        <Link to="/" className="logo-link">
+          <div className="logo-text">
+            <span className="logo-main">SELJAK</span>
+            <span className="logo-sub">GAMING</span>
+          </div>
         </Link>
         <button className="nav-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          ☰
+          <span className={`hamburger ${menuOpen ? 'active' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
         </button>
         <nav className={`nav ${menuOpen ? "active" : ""}`}>
           <ul className="nav-list">
@@ -40,8 +47,9 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/cart" className="nav-link">
-                <FontAwesomeIcon icon={faShoppingCart} />
+              <Link to="/cart" className="nav-link cart-link">
+                <span className="cart-icon">🛒</span>
+                <span className="cart-text">Handlekurv</span>
               </Link>
             </li>
           </ul>

@@ -15,7 +15,7 @@ const products = [
     id: 1,
     name: "Charmander Limited Edition PC",
     category: "PCs",
-    
+    description: "Høyytelses gaming-PC med unikt Charmander-tema og kraftige komponenter.",
     specifications: [
       "GIGABYTE RTX 2060",
       "AMD Ryzen 5 3600",
@@ -34,7 +34,7 @@ const products = [
     id: 2,
     name: "Red Beast Gaming PC",
     category: "PCs",
-   
+    description: "Kraftig gaming-PC designet for enestående ytelse og pålitelighet.",
     specifications: [
       "ASUS GTX 1070",
       "i5 11400F",
@@ -52,7 +52,7 @@ const products = [
     id: 3,
     name: "Gaming Keyboard",
     category: "Accessories",
-   
+    description: "Høyytelses gaming-tastatur med mekaniske brytere og RGB-belysning.",
     specifications: [
       "Mechanical switches",
       "RGB lighting",
@@ -67,7 +67,7 @@ const products = [
     id: 4,
     name: "Hyper X Fury 16 GB DDR4 RAM",
     category: "Components",
- 
+    description: "HyperX Fury DDR4-RAM gir deg topp ytelse for gaming og avanserte oppgaver.",
     specifications: ["2x8 GB DDR4 RAM", "2133 MHz"],
     price: 999,
     images: [ram],

@@ -1,0 +1,271 @@
+/* Moderne Bunntekst Design */
+/* Hovedcontainer for bunnteksten med gradient bakgrunn og animasjoner */
+.footer {
+  position: relative;
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+  color: white;
+  padding: 60px 0 30px;
+  overflow: hidden;
+}
+
+/* Bakgrunnselement for bunnteksten */
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Container for animerte partikler i bakgrunnen */
+.footer-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Individuelle animerte partikler som flyter rundt */
+.footer-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(100, 200, 255, 0.4);
+  border-radius: 50%;
+  animation: footerFloat 10s ease-in-out infinite;
+}
+
+/* Posisjonering av partikkel 1 - øvre venstre område */
+.footer-particle.particle-1 {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+/* Posisjonering av partikkel 2 - nedre høyre område */
+.footer-particle.particle-2 {
+  top: 60%;
+  left: 70%;
+  animation-delay: 2s;
+}
+
+/* Posisjonering av partikkel 3 - øvre høyre område */
+.footer-particle.particle-3 {
+  top: 30%;
+  left: 80%;
+  animation-delay: 4s;
+}
+
+/* Posisjonering av partikkel 4 - nedre venstre område */
+.footer-particle.particle-4 {
+  top: 80%;
+  left: 30%;
+  animation-delay: 6s;
+}
+
+/* Animasjon for flytende partikler - bevegelse opp/ned og side til side */
+@keyframes footerFloat {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.4;
+  }
+  50% { 
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.8;
+  }
+}
+
+/* Hovedcontainer for bunntekst innhold - grid layout med tre kolonner */
+.footer-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Venstre seksjon - logo og copyright informasjon */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Container for logo elementer */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hovedlogo tekst med gradient farge effekt */
+.footer-logo-main {
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: linear-gradient(45deg, #64c8ff, #ff64c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+/* Undertekst for logo med mindre tekststørrelse */
+.footer-logo-sub {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin-top: -2px;
+}
+
+/* Copyright tekst styling */
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Midtre seksjon - sosiale medier ikoner */
+.footer-center {
+  text-align: center;
+}
+
+/* Tittel for sosiale medier seksjon */
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #64c8ff;
+}
+
+/* Container for sosiale medier ikoner */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Individuelt sosialt media ikon med glassmorfisme effekt */
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(100, 200, 255, 0.3);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* Hover effekt for sosiale medier ikoner - løftes opp med glød */
+.social-icon:hover {
+  background: rgba(100, 200, 255, 0.2);
+  border-color: #64c8ff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(100, 200, 255, 0.3);
+}
+
+/* Tekststørrelse for ikonene inne i sirklene */
+.social-icon span {
+  font-size: 1.2rem;
+}
+
+/* Høyre seksjon - kontaktinformasjon */
+.footer-right {
+  text-align: left;
+}
+
+/* Container for kontaktinformasjon elementer */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Individuelt kontaktelement med ikon og tekst */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover effekt for kontaktelementer - endrer farge til blå */
+.contact-item:hover {
+  color: #64c8ff;
+}
+
+/* Styling for ikoner i kontaktinformasjon */
+.contact-icon {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* Responsivt Design - Mobilvisning */
+/* Tablet og mindre skjermer - endrer til en kolonne layout */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  /* Sentrer høyre seksjon på mindre skjermer */
+  .footer-right {
+    text-align: center;
+  }
+  
+  /* Sentrer venstre seksjon elementer */
+  .footer-left {
+    align-items: center;
+  }
+  
+  /* Reduserer logo størrelse på tablet */
+  .footer-logo-main {
+    font-size: 1.5rem;
+  }
+  
+  /* Reduserer undertekst størrelse */
+  .footer-logo-sub {
+    font-size: 0.7rem;
+  }
+  
+  /* Sentrer kontaktelementer på tablet */
+  .contact-item {
+    justify-content: center;
+  }
+}
+
+/* Mobiltelefon visning - ekstra små skjermer */
+@media (max-width: 480px) {
+  /* Reduserer padding på små skjermer */
+  .footer {
+    padding: 40px 0 20px;
+  }
+  
+  /* Mindre gap mellom sosiale medier ikoner */
+  .social-icons {
+    gap: 10px;
+  }
+  
+  /* Mindre sosiale medier ikoner på mobil */
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Mindre ikon tekst på mobil */
+  .social-icon span {
+    font-size: 1rem;
+  }
+}
